@@ -8,8 +8,8 @@ export class Config {
         public host: string = "rekiny.wroclaw.pl",
         public username: string = "",
         public password: string = "",
-        public localPath: string = "/home/[username]/Pictures/flame",
-        public remotePath: string = "/services/zrzuty-ekranu",
+        public localPath: string = "/home/[username]/Pictures/flame/",
+        public remotePath: string = "/services/zrzuty-ekranu/",
         public url: string = "http://zrzuty.rekiny.wroclaw.pl/"
     ){}
 
