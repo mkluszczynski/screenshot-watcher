@@ -6,7 +6,8 @@
     "compile:linux": "bun build --compile --target=bun-linux-x64 ./src/main.ts --outfile out/screenshot-watcher-linux",
     "compile:windows": "bun build --compile --target=bun-windows-x64 ./src/main.ts --outfile out/screenshot-watcher-windows",
     "compile:mac": "bun build --compile --target=bun-darwin-x64 ./src/main.ts --outfile out/screenshot-watcher-mac",
-    "compile:mac:arm": "bun build --compile --target=bun-darwin-arm64 ./src/main.ts --outfile out/screenshot-watcher-mac-arm"
+    "compile:mac:arm": "bun build --compile --target=bun-darwin-arm64 ./src/main.ts --outfile out/screenshot-watcher-mac-arm",
+    "compile:all": "bun compile:linux && bun compile:windows && bun compile:mac && bun compile:mac:arm"
   },
   "devDependencies": {
     "@types/bun": "latest",
