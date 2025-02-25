@@ -20,7 +20,7 @@ export function uploadScreenShot(fileName: string) {
         return sftp.end()
     })
     .catch((err) => {
-        console.log("[!!] Upload failed, please check your credentials and try again.");
+        console.log("[!!] Upload failed, please check your credentials and try again.", err.message);
         notifier.notify({title: "Screenshot watcher", message: `Upload failed, please check your credentials and try again.`});
         process.exit()
     });

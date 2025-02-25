@@ -31,7 +31,7 @@ export class Config {
 
 
     private static getConfigFile(){
-        const configPath = path.join(process.cwd(), 'config.json');
+        const configPath = path.join(process.cwd(), 'screenwatcher-config.json');
         return JSON.parse(fs.readFileSync(configPath, 'utf8'));
     }
 
@@ -48,7 +48,7 @@ export class Config {
 
     private static createConfigFile(){
         const configData = new Config()
-        const configPath = path.join(process.cwd(), 'config.json');
+        const configPath = path.join(process.cwd(), 'screenwatcher-config.json');
 
         fs.writeFileSync(configPath, JSON.stringify(configData, null, 2));
     }
