@@ -1,6 +1,5 @@
 import Client from "ssh2-sftp-client";
 import { Config } from "./config";
-import notifier from 'node-notifier';
 
 const config = Config.load();
 
@@ -21,7 +20,7 @@ export function uploadScreenShot(fileName: string) {
     })
     .catch((err) => {
         console.log("[!!] Upload failed, please check your credentials and try again.", err.message);
-        notifier.notify({title: "Screenshot watcher", message: `Upload failed, please check your credentials and try again.`});
+        // notifier.notify({title: "Screenshot watcher", message: `Upload failed, please check your credentials and try again.`});
         process.exit()
     });
 
