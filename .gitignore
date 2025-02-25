@@ -175,4 +175,4 @@ dist
 .DS_Store
 
 config.json
-screenwatcher-config.json
+screenshot-watcher-config.json
