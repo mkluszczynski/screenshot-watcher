@@ -5,12 +5,12 @@ export class Config {
 
 
     constructor(
-        public host: string = "rekiny.wroclaw.pl",
+        public host: string = "your-host.com",
         public username: string = "",
         public password: string = "",
-        public localPath: string = "/home/[username]/Pictures/flame/",
-        public remotePath: string = "/services/zrzuty-ekranu/",
-        public url: string = "http://zrzuty.rekiny.wroclaw.pl/"
+        public localPath: string = "/home/[username]/Pictures/screenshots/",
+        public remotePath: string = "/server/path/to/screenshots/",
+        public url: string = "http://url.your-host.com/"
     ){}
 
     public toJson(): string {
