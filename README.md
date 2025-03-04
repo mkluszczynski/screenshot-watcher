@@ -28,12 +28,12 @@ nano screenshot-watcher-config.json
 
 ```json
 {
-    "host": "rekiny.wroclaw.pl",
+    "host": "your-host.com",
     "username": "",
     "password": "",
-    "localPath": "/home/[username]/Pictures/flame/",
-    "remotePath": "/services/zrzuty-ekranu/",
-    "url": "http://zrzuty.rekiny.wroclaw.pl/"
+    "localPath": "/home/[username]/Pictures/screenshots/",
+    "remotePath": "/server/path/to/screenshots/",
+    "url": "http://url.your-host.com/"
 }
 ```
 
