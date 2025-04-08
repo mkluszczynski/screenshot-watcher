@@ -3,7 +3,8 @@ import { Config } from "./config";
 
 const config = Config.load();
 
-export function uploadScreenShot(fileName: string) {
+export function uploadScreenShotViaSFTP(fileName: string) {
+    console.log("[SFTP] Upload started...")
     let sftp = new Client()
 
     const connect = sftp.connect({
@@ -22,7 +23,8 @@ export function uploadScreenShot(fileName: string) {
         console.log("[!!] Upload failed, please check your credentials and try again.", err.message);
         // notifier.notify({title: "Screenshot watcher", message: `Upload failed, please check your credentials and try again.`});
         process.exit()
-    });
-
-    
+    })
+    .finally(() => {
+        console.log("[SFTP] Upload finished.")
+    })
 }

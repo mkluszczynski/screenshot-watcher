@@ -10,7 +10,8 @@ export class Config {
         public password: string = "",
         public localPath: string = "/home/[username]/Pictures/screenshots/",
         public remotePath: string = "/server/path/to/screenshots/",
-        public url: string = "http://url.your-host.com/"
+        public url: string = "http://url.your-host.com/",
+        public ftp: boolean = false
     ){}
 
     public toJson(): string {
@@ -43,6 +44,7 @@ export class Config {
         config.localPath = json.localPath;
         config.remotePath = json.remotePath;
         config.url = json.url;
+        config.ftp = json.ftp;
         return config;
     }
 

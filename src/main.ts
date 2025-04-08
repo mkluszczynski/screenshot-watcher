@@ -1,17 +1,20 @@
 import { watch } from "fs";
 import { Config } from "./config";
-import { uploadScreenShot } from "./upload";
 import clipboard from "clipboardy";
+import { uploadScreenShotViaFTP } from "./upload-ftp";
+import { uploadScreenShotViaSFTP } from "./upload-sftp";
 
 const config = Config.load();
+
 
 const watcher = watch(config.localPath, (event, filename) => {
   console.log(`Detected new image in ${filename}`);
   if(!filename) return;
 
-  uploadScreenShot(filename);
+  if(config.ftp) uploadScreenShotViaFTP(filename)
+  else uploadScreenShotViaSFTP(filename)
+
   clipboard.writeSync(config.url + filename);
-  // notifier.notify({title: "Screenshot watcher", message: `URL copied to clipboard: ${config.url + filename}`});
   
 });
 

@@ -2,7 +2,7 @@
 
 ## About
 
-Application for automatic upload files to server via sftp.
+Application for automatic upload files to server via sftp/ftp.
 
 ## 🐧 Linux setup
 
@@ -33,12 +33,15 @@ nano screenshot-watcher-config.json
     "password": "",
     "localPath": "/home/[username]/Pictures/screenshots/",
     "remotePath": "/server/path/to/screenshots/",
-    "url": "http://url.your-host.com/"
+    "url": "http://url.your-host.com/",
+    "ftp": false
 }
 ```
 
 > [!IMPORTANT]
 > `localPath` Specify where your screenshot app is saving pictures.
+
+> If you want to use ftp set `ftp` to true
 
 5. Set executable as an autostart application.
 
@@ -78,7 +81,8 @@ nano screenshot-watcher-config.json
     "password": "",
     "localPath": "/home/[username]/Pictures/screenshots/",
     "remotePath": "/server/path/to/screenshots/",
-    "url": "http://url.your-host.com/"
+    "url": "http://url.your-host.com/",
+    "ftp": false
 }
 ```
 
@@ -106,7 +110,8 @@ Follow this [tutorial](https://support.apple.com/guide/mac-help/open-items-autom
     "password": "",
     "localPath": "/home/[username]/Pictures/screenshots/",
     "remotePath": "/server/path/to/screenshots/",
-    "url": "http://url.your-host.com/"
+    "url": "http://url.your-host.com/",
+    "ftp": false
 }
 ```
 
