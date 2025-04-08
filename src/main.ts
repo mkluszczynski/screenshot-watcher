@@ -4,8 +4,9 @@ import clipboard from "clipboardy";
 import { uploadScreenShotViaFTP } from "./upload-ftp";
 import { uploadScreenShotViaSFTP } from "./upload-sftp";
 
-const config = Config.load();
+console.log("[Screenshot Watcher][1.1.0]");
 
+const config = Config.load();
 
 const watcher = watch(config.localPath, (event, filename) => {
   console.log(`Detected new image in ${filename}`);
